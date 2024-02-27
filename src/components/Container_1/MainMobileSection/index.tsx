@@ -2,7 +2,7 @@ import { Box, Button, Flex, Heading, Image, Link, Text } from "@chakra-ui/react"
 import { mainSectionData } from "./data";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { BsArrowRight } from "react-icons/bs";
-import { AgendeUmaConsultaButton } from "../../AgendeUmaConsultaButton";
+import { AgendeUmaConsultaButton } from "../../CallToActionButton";
 
 
 export function MainMobileSection() {

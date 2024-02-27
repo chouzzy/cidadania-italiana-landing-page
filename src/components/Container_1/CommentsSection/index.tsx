@@ -15,7 +15,7 @@ import { commentsSectionData } from "./data";
 import { CaretCircleLeft, CaretCircleRight, Quotes } from "phosphor-react";
 import { Header } from "./Header";
 import { aboutSectionData } from "../AboutSection/data";
-import { AgendeUmaConsultaButton } from "../../AgendeUmaConsultaButton";
+import { AgendeUmaConsultaButton } from "../../CallToActionButton";
 import { Carousel_1 } from "./Carousel_1";
 import { Carousel_2 } from "./Carousel_2";
 import { JobInfo } from "./JobInfo";

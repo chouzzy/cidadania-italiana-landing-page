@@ -1,5 +1,5 @@
 {
-  "name": "draSabrinaZanon",
+  "name": "PassaporteCidadaniaItaliana",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@phosphor-icons/react": "^2.0.15",
     "@react-icons/all-files": "^4.1.0",
     "@sendgrid/mail": "^7.7.0",
     "axios": "^0.27.2",
@@ -38,6 +39,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chouzzy/dralarissazanon"
+    "url": "https://github.com/chouzzy/PassaporteCidadaniaItaliana"
   }
 }

@@ -1,5 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
-import { AgendeUmaConsultaButton } from "../../../AgendeUmaConsultaButton";
+import { AgendeUmaConsultaButton } from "../../../CallToActionButton";
 import { commentsSectionData } from "../data";
 
 

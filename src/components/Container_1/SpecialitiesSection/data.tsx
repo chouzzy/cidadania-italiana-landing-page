@@ -19,25 +19,13 @@ const specialitiesSectionsData = {
                 O Governo Federal, pelo Ministério da Saúde, instituiu uma Política Nacional de Saúde voltada para a Saúde Bucal das Gestantes, trazendo a necessidade do pré-natal odontológico, realizado por um Cirurgião-Dentista.
                 <br></br>
                 <br></br>
-                Durante a gravidez, o corpo da mulher passa por diversas transformações, algumas delas podendo acarretar problemas na cavidade bucal, como alterações salivares, cáries e periodontite.
+                Durante a gravidez, o corpo da mulher passa por diversas transformações, algumas delas podendo acarretar problemas na cavidade bucal, como alterações salivares, cáries e periodontite. A falta de intervenção médica no cuidado com as cáries e a gengivite pode causar o agravamento de ambas, gerando um quadro infeccioso de periodontite. Essa infecção bacteriana afeta os ossos e ligamentos da mandíbula, comprometendo a saúde dos dentes.
                 <br></br>
                 <br></br>
-                A falta de intervenção médica no cuidado com as cáries e a gengivite pode causar o agravamento de ambas, gerando um quadro infeccioso de periodontite. Essa infecção bacteriana afeta os ossos e ligamentos da mandíbula, comprometendo a saúde dos dentes.
+                Se esse quadro de periodontite não for solucionado, a infecção pode entrar na corrente sanguínea e causar problemas em outras partes do corpo, como no sistema cardiovascular. Além disso, estudos recentes apontam que se essas bactérias se instalarem no útero, o corpo produzirá um hormônio chamado prostaglandina, que, além de combater a infecção, pode induzir ao parto prematuro. Tais pesquisas também indicam que as gestantes que sofriam de gengivite davam à luz bebês com peso inferior ao esperado.
                 <br></br>
                 <br></br>
-                Se esse quadro de periodontite não for solucionado, a infecção pode entrar na corrente sanguínea e causar problemas em outras partes do corpo, como no sistema cardiovascular.
-                <br></br>
-                <br></br>
-                Além disso, estudos recentes apontam que se essas bactérias se instalarem no útero, o corpo produzirá um hormônio chamado prostaglandina, que, além de combater a infecção, pode induzir ao parto prematuro. Tais pesquisas também indicam que as gestantes que sofriam de gengivite davam à luz bebês com peso inferior ao esperado.
-                <br></br>
-                <br></br>
-                A mulher vive a maternidade de forma intensa, pois há uma transformação total em sua anatomia que, por sua vez, se adapta a uma nova vida – isso sem contar os impactos emocionais gerados para a gestante.
-                <br></br>
-                <br></br>
-                Nesse sentido, a mulher também adquire hábitos mais saudáveis durante a gravidez, uma vez que ela passa a ter mais preocupações com a saúde do bebê.
-                <br></br>
-                <br></br>
-                O pré-natal tem como objetivo prevenir doenças e problemas bucais, identificar alterações e tratá-las antes que se agravem, orientar a paciente sobre os cuidados com a saúde bucal e sanar suas principais dúvidas.
+                A mulher vive a maternidade de forma intensa, pois há uma transformação total em sua anatomia que, por sua vez, se adapta a uma nova vida – isso sem contar os impactos emocionais gerados para a gestante. Nesse sentido, a mulher também adquire hábitos mais saudáveis durante a gravidez, uma vez que ela passa a ter mais preocupações com a saúde do bebê. O pré-natal tem como objetivo prevenir doenças e problemas bucais, identificar alterações e tratá-las antes que se agravem, orientar a paciente sobre os cuidados com a saúde bucal e sanar suas principais dúvidas.
                 <br></br>
                 <br></br>
                 A tarefa do odontopediatra começa, idealmente, antes do nascimento da criança, através da orientação da mãe durante a gravidez.

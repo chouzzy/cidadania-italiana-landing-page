@@ -3,11 +3,11 @@ import { extendTheme } from '@chakra-ui/react'
 export const theme = extendTheme({
 
   fonts: {
-    heading: 'Poppins, Avenir, Heebo ',
-    body: 'Poppins, Avenir, Heebo'
+    heading: 'Heebo, Poppins, Avenir',
+    body: 'Heebo, Poppins, Avenir'
   },
   colors: {
-    backgroundLight: "#F4F1EE",
+    backgroundLight: "#EDF2F7",
     backgroundDark: "#96989a",
     brown: {
       300: '#d0a288',
@@ -19,19 +19,21 @@ export const theme = extendTheme({
       700: '#a09080'
     },
     teal: {
+      300: '#7CC3BB',
       400: '#65bfbb',
-      500: '#51ada8'
+      500: '#1C928B'
     },
     rose: {
       400:'#B39283',
       600:'#9E7E6F'
     },
     light:{
-      400:'#F4F1EE',
+      400:'#EDF2F7',
       600:'#ebe4dd'
     },
     dark:{
-      400:'#605D5D'
+      400:'#605D5D',
+      800:'#343434'
     },
     facebook:'#3b5998',
     whatsapp:'#25d366',

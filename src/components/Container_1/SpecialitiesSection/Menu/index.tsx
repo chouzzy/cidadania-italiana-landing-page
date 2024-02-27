@@ -2,7 +2,7 @@ import { Flex, Image, Text } from "@chakra-ui/react";
 import { specialitiesSectionsData } from "../data";
 import { GiClick } from "react-icons/gi";
 import { useRef, useState } from "react";
-import { AgendeUmaConsultaButton } from "../../../AgendeUmaConsultaButton";
+import { AgendeUmaConsultaButton } from "../../../CallToActionButton";
 
 export function Menu() {
     const { darkColorScheme, lightColorScheme } = specialitiesSectionsData;

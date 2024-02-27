@@ -4,7 +4,7 @@ import { BiMapPin } from "react-icons/bi";
 import { footerData } from "./data";
 import { FaFacebook, FaFacebookSquare, FaInstagram, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import { useState } from "react";
-import { AgendeUmaConsultaButtonData } from "../../AgendeUmaConsultaButton/data";
+import { Header } from "./Header";
 
 export function Footer() {
 
@@ -15,161 +15,63 @@ export function Footer() {
     return (
         <Flex
             w='100%'
-            bgColor={'rose.400'}
+            pt={12}
+            bgColor={'dark.800'}
             color={'light.400'}
 
-            flexDir={['column', 'column', 'column', 'column', 'row']}
+            flexDir={'column'}
             justifyContent={'center'}
             alignItems={'center'}
 
+            borderRadius={[
+                0,
+                0,
+                0,
+                '120px 120px 0px 0px',
+                '120px 120px 0px 0px'
+            ]}
+
             gap={6}
-            p={12}
         >
 
-            {/* LOGO */}
-            <Flex
-                flexDir={'column'}
-                justifyContent={'center'}
-                alignItems={'center'}
-                gap={8}
-            >
-
-                <Flex
-                    borderBottom={'1px solid #F4F1EE'}
-                >
-                    <Image
-                        src='static/img/container_1/footer/logo.png'
-                        maxW={['20rem', '25rem', '25rem', '25rem', '25rem']}
-                    />
-                </Flex>
-
-                <Flex
-                    fontSize={'3.5rem'}
-                    gap={2}
-                    borderBottom={'1px solid #F4F1EE'}
-                >
-                    <Link
-                        _hover={{ textDecor: 'none' }}
-                        href={AgendeUmaConsultaButtonData.href}
-                        target="_blank"
-                    >
-                        <Flex
-                            cursor={'pointer'}
-                            _hover={{ color: 'teal.400', transition: '600ms' }}
-                        >
-                            <WhatsappLogo weight="thin" />
-                        </Flex>
-                    </Link>
-
-                    <Link
-                        _hover={{ textDecor: 'none' }}
-                        href={AgendeUmaConsultaButtonData.instagram}
-                        target="_blank"
-                    >
-                        <Flex
-                            cursor={'pointer'}
-                            _hover={{ color: 'teal.400', transition: '600ms' }}
-                        >
-                            <InstagramLogo weight="thin" />
-                        </Flex>
-                    </Link>
-                </Flex>
-
-            </Flex>
-
-            {/* Menu */}
-            <Flex
-                flexDir={['column', 'row', 'row', 'row', 'column']}
-                alignItems={'flex-start'}
-                p={[2, 8, 8, 8, 8]}
-                gap={2}
-            >
-                <Flex
-                    alignItems={'center'}
-                    my={['initial', 'auto', 'auto', 'auto', 'initial']}
-                    textAlign={'center'}
-                    px={[2, 12, 12, 12, 0]}
-                >
-                    <Text
-                        fontWeight={'100'}
-                        fontFamily={'Poppins'}
-                        fontSize={'2rem'}
-                    >
-                        Onde me encontrar?
-                    </Text>
-                </Flex>
-
-                <Flex
-                    flexDir={'column'}
-                    alignItems={'flex-end'}
-                    justifyContent={'center'}
-                    w={['100%', '100%', '100%', 'initial', '100%']}
-                    gap={4}
-                >
-
-                    {mapsUrls.map((clinic, index) => {
-
-                        return (
-
-                            <Flex
-                                key={clinic.id}
-                                onClick={() => {
-                                    setMap(mapsUrls[index].url)
-                                    setActive(index)
-                                }}
-                                alignItems={'center'}
-                                justifyContent={'flex-end'}
-                                cursor={'pointer'}
-                                _hover={{ fontWeight: '600' }}
-                                fontWeight={active === index ? '600' : '300'}
-                                w='100%'
-                                gap={1}
-                            >
-                                {active === index ?
-                                    <Flex>
-                                        <Image
-                                            src='static/img/container_1/footer/arrow-right.png'
-                                        />
-
-                                        {/* <ArrowRight weight={active === index ? 'regular' : 'thin'} size={32} /> */}
-                                    </Flex>
-                                    :
-                                    ''
-                                }
-
-                                <Flex
-                                // w='100%'
-                                >
-                                    <MapPin weight={active === index ? 'regular' : 'thin'} size={32} />
-                                </Flex>
-
-                                <Flex
-                                    w='8rem'
-                                >
-                                    <Text
-                                        fontSize={'1.5rem'}
-                                    >
-                                        {clinic.name}
-                                    </Text>
-                                </Flex>
-                            </Flex>
-                        )
-                    })}
-                </Flex>
-
-            </Flex>
+            <Header />
 
             {/* MAPS */}
             <Flex>
                 <Flex
-                    w={['95vw', '90vw', '90vw', '90vw', '32rem']}
+                    w={['95vw', '90vw', '90vw', '90vw', '78rem']}
                     h='22rem'
                     p={4}
                 >
                     <iframe src={map}
-                        style={{ borderRadius: '80px 80px 80px 5px' }} width="100%" height="100%" loading="lazy" />
+                        style={{ borderRadius: '80px' }} width="100%" height="100%" loading="lazy" />
                 </Flex>
 
+            </Flex>
+
+            {/* ENDEREÇO E AWER */}
+            <Flex
+                w='100%'
+                flexDir={'column'}
+                alignItems={'center'}
+                justifyContent={'center'}
+                gap={8}
+            >
+                <Text
+                    fontSize={'1.5rem'}
+                    textAlign={'center'}
+                >
+                    {mapsUrls[0].endereço}
+                </Text>
+
+                <Flex
+                    fontSize={'0.75rem'}
+                    textAlign={'center'}
+                    gap={1}
+                >
+                    <Text> Desenvolvido por</Text>
+                    <Text color='#F55F5E'> awer </Text>
+                </Flex>
             </Flex>
 
 

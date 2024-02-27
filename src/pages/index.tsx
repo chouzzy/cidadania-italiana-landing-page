@@ -9,9 +9,10 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>Dra Sabrina Zanon</title>
+      <title>Clube do Passaporte - Cidadania Italiana</title>
     </Head>
     <Container_1/>
     </>
   )
 }
+ 

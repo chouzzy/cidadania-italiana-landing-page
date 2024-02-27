@@ -1,13 +1,11 @@
-import { Container, Flex, useBreakpointValue } from "@chakra-ui/react";
+import { Container, useBreakpointValue } from "@chakra-ui/react";
 import { MainSection } from "./MainSection";
-import { VideoSection } from "./VideoSection";
-import { StepsSection } from "./StepsSection";
+import { VantageSection } from "./VantageSection";
 import { AboutSection } from "./AboutSection";
-import { SpecialitiesSection } from "./SpecialitiesSection";
-import { CommentsSection } from "./CommentsSection";
+import { TestimonialSection } from "./TestimonialSection";
+import { ItalianFormSection } from "./ItalianFormSection";
+import { NonItalianFormSection } from "./NonItalianFormSection";
 import { Footer } from "./Footer";
-import { MainMobileSection } from "./MainMobileSection";
-import { StepToStepSection } from "./StepToStepSection";
 
 
 export function Container_1() {
@@ -27,31 +25,27 @@ export function Container_1() {
             minW='100%'
             bg='backgroundLight'
             centerContent={true}
+            gap={16}
             p={0}
             m={0}
+            position={'relative'}
         >
-            {isMobileVersion ?
-                // Versão mobile
-                <Flex flexDir={'column'} mx='auto'>
-                    <MainMobileSection />
-                </Flex>
-                :
-                // Versão desktop
-                <Flex w='100%' flexDir={'column'} maxW='1920px'>
-                    <MainSection />
+            {/* <Flex color='black' position={'absolute'} top={1000} > O </Flex> */}
+            <MainSection />
 
-                </Flex>
-            }
-
-            <VideoSection />
-
-            <StepToStepSection />
+            <VantageSection />
 
             <AboutSection />
 
-            <SpecialitiesSection />
+            <TestimonialSection />
 
-            <CommentsSection />
+            <ItalianFormSection />
+
+            <NonItalianFormSection />
+
+            {/* <SpecialitiesSection />
+
+            <CommentsSection /> */}
 
             <Footer />
         </Container>

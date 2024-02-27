@@ -1638,6 +1638,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@phosphor-icons/react@npm:^2.0.15":
+  version: 2.1.3
+  resolution: "@phosphor-icons/react@npm:2.1.3"
+  peerDependencies:
+    react: ">= 16.8"
+    react-dom: ">= 16.8"
+  checksum: 0a35247a63fbba01dd58edba01dc1f444094ce85a516d1ab341db7699d189c9a4824eb729ca0a768ebb76b25890760ef9d339f4de49a0e4541c6a71f5d97ea93
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -1866,6 +1876,38 @@ __metadata:
   checksum: d3ff93ff696a9287731f3b3f3d5d734b697576ec626eb683252f074baeca46770f931ddb52c8cf08854a6a3c422182a3aaf588c30736b7f26fb3f1e9d6e35ef5
   languageName: node
   linkType: hard
+
+"PassaporteCidadaniaItaliana@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "PassaporteCidadaniaItaliana@workspace:."
+  dependencies:
+    "@chakra-ui/react": ^2.3.2
+    "@emotion/react": ^11.10.4
+    "@emotion/styled": ^11.10.4
+    "@phosphor-icons/react": ^2.0.15
+    "@react-icons/all-files": ^4.1.0
+    "@sendgrid/mail": ^7.7.0
+    "@types/node": ^18.7.17
+    "@types/react": ^18.0.20
+    axios: ^0.27.2
+    eslint: 8.23.1
+    eslint-config-next: 12.3.0
+    flat-color-icons: ^1.1.0
+    framer-motion: ^7.3.4
+    next: 12.3.0
+    phosphor-react: ^1.4.1
+    react: 18.2.0
+    react-dom: 18.2.0
+    react-facebook-pixel: ^1.0.4
+    react-hook-form: ^7.36.0
+    react-icons: ^4.9.0
+    react-scroll: ^1.8.9
+    sass: ^1.54.9
+    sitemap: ^7.1.1
+    swiper: ^8.4.2
+    typescript: ^4.8.3
+  languageName: unknown
+  linkType: soft
 
 "abbrev@npm:^2.0.0":
   version: 2.0.0
@@ -2483,37 +2525,6 @@ __metadata:
   checksum: 616a68cbae59eaea2e717ada5855346f0ffa4ac10ab96713bb42b90efabce367213c3c491c4bf5502d177b0865c63d8abd298cc8e12bdda171340c853d6b515a
   languageName: node
   linkType: hard
-
-"draSabrinaZanon@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "draSabrinaZanon@workspace:."
-  dependencies:
-    "@chakra-ui/react": ^2.3.2
-    "@emotion/react": ^11.10.4
-    "@emotion/styled": ^11.10.4
-    "@react-icons/all-files": ^4.1.0
-    "@sendgrid/mail": ^7.7.0
-    "@types/node": ^18.7.17
-    "@types/react": ^18.0.20
-    axios: ^0.27.2
-    eslint: 8.23.1
-    eslint-config-next: 12.3.0
-    flat-color-icons: ^1.1.0
-    framer-motion: ^7.3.4
-    next: 12.3.0
-    phosphor-react: ^1.4.1
-    react: 18.2.0
-    react-dom: 18.2.0
-    react-facebook-pixel: ^1.0.4
-    react-hook-form: ^7.36.0
-    react-icons: ^4.9.0
-    react-scroll: ^1.8.9
-    sass: ^1.54.9
-    sitemap: ^7.1.1
-    swiper: ^8.4.2
-    typescript: ^4.8.3
-  languageName: unknown
-  linkType: soft
 
 "eastasianwidth@npm:^0.2.0":
   version: 0.2.0
