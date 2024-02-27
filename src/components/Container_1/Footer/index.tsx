@@ -69,8 +69,15 @@ export function Footer() {
                     textAlign={'center'}
                     gap={1}
                 >
-                    <Text> Desenvolvido por</Text>
-                    <Text color='#F55F5E'> awer </Text>
+                    <Link
+                        _hover={{ textDecor: 'none', color:"#F55F5E" }}
+                        href={'https://www.awer.co'}
+                        target="_blank"
+                        gap={2}
+                    >
+                        <Text display={'inline'}> Desenvolvido por</Text>
+                        <Text display={'inline'} color='#F55F5E'> awer </Text>
+                    </Link>
                 </Flex>
             </Flex>
 
