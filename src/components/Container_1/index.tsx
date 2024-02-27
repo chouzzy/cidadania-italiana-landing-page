@@ -43,10 +43,6 @@ export function Container_1() {
 
             <NonItalianFormSection />
 
-            {/* <SpecialitiesSection />
-
-            <CommentsSection /> */}
-
             <Footer />
         </Container>
     )
