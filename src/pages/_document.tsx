@@ -63,7 +63,9 @@ export default class MyDocument extends Document {
                   {/* <!-- End Facebook Pixel Code --> */}
                </React.Fragment>
             </Head>
-            <body>
+            <body
+               style={{backgroundColor:"#EDF2F7"}}
+            >
                <noscript
                   dangerouslySetInnerHTML={{
                      __html: `
