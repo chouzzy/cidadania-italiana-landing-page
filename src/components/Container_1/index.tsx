@@ -23,7 +23,7 @@ export function Container_1() {
     return (
         <Container
             minW='100%'
-            bg='backgroundLight'
+            bgColor='light.400'
             centerContent={true}
             gap={16}
             p={0}
