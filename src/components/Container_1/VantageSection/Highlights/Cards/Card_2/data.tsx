@@ -30,7 +30,7 @@ export const Card_2_Data = {
         {
             icon:<Percent size={32} weight="light" />,
             title: 'Taxa de 100% de aprovação',
-            subtitle: 'seu visto garantido'
+            subtitle: 'cuidado com todos os detalhes no seu processo'
         },
     ]
 }
