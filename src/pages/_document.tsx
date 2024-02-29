@@ -7,24 +7,24 @@ export default class MyDocument extends Document {
          <Html>
             <Head>
                {/* <!-- HTML Meta Tags --> */}
-               <meta name="description" content="Desperte o brilho do sorriso das crianças" />
+               <meta name="description" content="Transformando sonhos em realidade: seu passaporte para a Itália está em nossas mãos." />
                <meta name="keywords" content="dentista" />
 
                {/* <!-- Facebook Meta Tags --> */}
-               <meta property="og:url" content="https://www.clubedopassaporte.com/" />
+               <meta property="og:url" content="https://nacionalidadeitaliana.clubedopassaporte.com/" />
                <meta property="og:type" content="website" />
                <meta property="og:title" content="Transformando sonhos em realidade: seu passaporte para a Itália está em nossas mãos." />
                <meta property="og:description" content="Somos um escritório migratório conceituado com sede em São Paulo, Lisboa e Milão. Acreditamos na desburocratização total dos processos para os nossos clientes e, por isso, cuidamos dos processos de A a Z, com intuito de conquistar a sua cidadania rapidamente e deixar todo o trabalho burocrático conosco." />
-               <meta property="og:image" content="https://www.clubedopassaporte.com/static/img/logo.png" />
+               <meta property="og:image" content="https://nacionalidadeitaliana.clubedopassaporte.com/static/img/logo.png" />
                <meta name="facebook-domain-verification" content="p9o4crdziw52naiebnk8mv7mj3s7pu" />
 
                {/* <!-- Twitter Meta Tags --> */}
                <meta name="twitter:card" content="summary_large_image" />
                <meta property="twitter:domain" content="clubedopassaporte.com" />
-               <meta property="twitter:url" content="https://www.clubedopassaporte.com//" />
+               <meta property="twitter:url" content="https://nacionalidadeitaliana.clubedopassaporte.com/" />
                <meta name="twitter:title" content="Transformando sonhos em realidade: seu passaporte para a Itália está em nossas mãos." />
                <meta name="twitter:description" content="Somos um escritório migratório conceituado com sede em São Paulo, Lisboa e Milão. Acreditamos na desburocratização total dos processos para os nossos clientes e, por isso, cuidamos dos processos de A a Z, com intuito de conquistar a sua cidadania rapidamente e deixar todo o trabalho burocrático conosco." />
-               <meta name="twitter:image" content="https://www.clubedopassaporte.com/static/img/logo.png" />
+               <meta name="twitter:image" content="https://nacionalidadeitaliana.clubedopassaporte.com/static/img/logo.png" />
                
 
 
