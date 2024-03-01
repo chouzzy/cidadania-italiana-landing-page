@@ -16,6 +16,7 @@ export default async (req, res) => {
    
    Nome: ${body.name}\r\n
    Whatsapp: ${body.whatsapp}\r\n
+   Antecessor: ${body.ancestor}\r\n
    Parentesco: ${body.parent}\r\n
    Nome do(a) italiano(a): ${body.nome_do_italiano}\r\n
    Possui algum documento do(a) italiano(a)?: ${body.documento}\r\n\n

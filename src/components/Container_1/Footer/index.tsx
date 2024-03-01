@@ -1,8 +1,5 @@
-import { Button, Flex, Heading, Icon, Image, Link, Text, VStack } from "@chakra-ui/react";
-import { InstagramLogo, WhatsappLogo, BookOpen, MapPin, FacebookLogo, ArrowRight } from "phosphor-react";
-import { BiMapPin } from "react-icons/bi";
+import { Flex, Link, Text } from "@chakra-ui/react";
 import { footerData } from "./data";
-import { FaFacebook, FaFacebookSquare, FaInstagram, FaWhatsapp, FaWhatsappSquare } from "react-icons/fa";
 import { useState } from "react";
 import { Header } from "./Header";
 

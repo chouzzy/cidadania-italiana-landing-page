@@ -110,8 +110,6 @@ export function Header() {
 
                 <Link
                     _hover={{ textDecor: 'none' }}
-                    href={CallToActionButtonData.href}
-                    target="_blank"
                 >
 
 

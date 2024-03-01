@@ -8,6 +8,7 @@ export const form = {
     inputs: {
         name:'SEU NOME COMPLETO',
         whatsapp:"SEU WHATSAPP",
+        ancestor:"Já sabe quem foi o italiano na sua família?",
         parent:"GRAU DE PARENTESCO COM O ANTEPASSADO",
         italianName:"NOME COMPLETO DO ITALIANO",
         document:"VOCÊ POSSUI ALGUM DOCUMENTO DO(A) ITALIANO(A)?"

@@ -1,5 +1,4 @@
 import { Flex } from "@chakra-ui/react";
-import { Highlights } from "./Highlights";
 import { VantageHeader } from "./Header";
 import { vantageSectionData } from "./data";
 

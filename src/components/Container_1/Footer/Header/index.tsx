@@ -1,6 +1,4 @@
-import { Divider, Flex, Image, Text, useBreakpointValue } from "@chakra-ui/react";
-import { InstagramLogo } from "phosphor-react";
-import { CallToActionButton } from "../../../CallToActionButton";
+import { Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 
 
 

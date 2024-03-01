@@ -53,6 +53,7 @@ export function Form() {
 
     return (
         <Flex
+            id="#italianFormSection"
             p={[8, 12, 12, 12, 24]}
             alignItems={'center'}
             justifyContent={'center'}
@@ -118,6 +119,27 @@ export function Form() {
                             {form.inputs.whatsapp}
                         </FormLabel>
                         <Input placeholder="(11) 91234-5678" {...register("whatsapp")} />
+                    </FormControl>
+
+                    <FormControl
+                        isRequired={true}
+                    >
+                        <FormLabel
+                            fontSize={'0.875rem'}
+                            fontWeight={'700'}
+                            letterSpacing={'5%'}
+                        >
+                            {form.inputs.ancestor}
+                        </FormLabel>
+
+                        <Select
+                            color={'light.400'}
+                            {...register("parent")}
+                        >
+                            <option style={{ backgroundColor: '#343434' }} value="">Selecione</option>
+                            <option style={{ backgroundColor: '#343434' }} value="pai">Pai</option>
+                            <option style={{ backgroundColor: '#343434' }} value="mãe">Quero descobrir</option>
+                        </Select>
                     </FormControl>
 
                     <FormControl
