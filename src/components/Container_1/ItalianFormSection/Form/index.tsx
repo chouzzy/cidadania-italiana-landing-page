@@ -137,8 +137,8 @@ export function Form() {
                             {...register("parent")}
                         >
                             <option style={{ backgroundColor: '#343434' }} value="">Selecione</option>
-                            <option style={{ backgroundColor: '#343434' }} value="pai">Pai</option>
-                            <option style={{ backgroundColor: '#343434' }} value="mãe">Quero descobrir</option>
+                            <option style={{ backgroundColor: '#343434' }} value="ja_sei">Já sei</option>
+                            <option style={{ backgroundColor: '#343434' }} value="ainda_nao_sei">Ainda não sei</option>
                         </Select>
                     </FormControl>
 
