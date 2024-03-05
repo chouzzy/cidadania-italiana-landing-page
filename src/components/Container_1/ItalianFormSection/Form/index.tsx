@@ -28,12 +28,12 @@ export function Form() {
 
         const emailData = { ...values }
 
-        // await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMzA0MzQ1MjZkNTUzMjUxMzMi_pc", JSON.stringify(emailData))
-        // .then((res) => {
-        // })
-        // .catch((err) => {
-        //   console.log(err);
-        // });
+        await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(emailData))
+        .then((res) => {
+        })
+        .catch((err) => {
+          console.log(err);
+        });
 
         return new Promise(() => {
             setTimeout(() => {
