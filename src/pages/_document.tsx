@@ -42,7 +42,7 @@ export default class MyDocument extends Document {
                t.src=v;s=b.getElementsByTagName(e)[0];
                s.parentNode.insertBefore(t,s)}(window, document,'script',
                'https://connect.facebook.net/en_US/fbevents.js');
-               fbq('init', '1469014893670193');
+               fbq('init', '700239298517091');
                fbq('track', 'PageView');` }}
                   />
                   <noscript dangerouslySetInnerHTML={{
@@ -56,8 +56,8 @@ export default class MyDocument extends Document {
                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-               'https://www.googletagmanager.com/gtm.js?id=AW-CODIGO'+i+dl;f.parentNode.insertBefore(j,f);
-               })(window,document,'script','dataLayer','AW-CODIGO');
+               'https://www.googletagmanager.com/gtm.js?id=GTM-TGLDLST'+i+dl;f.parentNode.insertBefore(j,f);
+               })(window,document,'script','dataLayer','GTM-TGLDLST');
                ` }}
                   />
                   {/* <!-- End Facebook Pixel Code --> */}
@@ -69,7 +69,7 @@ export default class MyDocument extends Document {
                <noscript
                   dangerouslySetInnerHTML={{
                      __html: `
-                     <iframe src="https://www.googletagmanager.com/ns.html?id=AW-CODIGO"
+                     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGLDLST"
                         height="0" width="0" style="display:none;visibility:hidden"></iframe>
                         <meta name="facebook-domain-verification" content="p9o4crdziw52naiebnk8mv7mj3s7pu" />`,
                   }}
