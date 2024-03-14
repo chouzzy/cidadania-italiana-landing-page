@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-TGLDLST');
          */}
-         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-CODIGO"></Script>
+         <Script async src="https://www.googletagmanager.com/gtag/js?id=GTM-TGLDLST"></Script>
 
          <Script id="google-tag-manager" strategy="afterInteractive" dangerouslySetInnerHTML={{
             __html: `           
@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'AW-CODIGO');`
+            gtag('config', 'GTM-TGLDLST');`
          }}>
          </Script>
 
