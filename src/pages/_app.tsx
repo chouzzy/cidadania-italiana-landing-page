@@ -10,7 +10,7 @@ import Script from 'next/script'
 
 
 
-const FB_PIXEL_ID = 'CODIGOPIXEL'
+const FB_PIXEL_ID = '700239298517091'
 
 function MyApp({ Component, pageProps }: AppProps) {
    const router = useRouter()
