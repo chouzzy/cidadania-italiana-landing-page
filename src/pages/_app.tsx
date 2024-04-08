@@ -10,7 +10,8 @@ import Script from 'next/script'
 
 
 
-const FB_PIXEL_ID = '700239298517091'
+// const FB_PIXEL_ID = '700239298517091'
+const FB_PIXEL_ID = ''
 
 function MyApp({ Component, pageProps }: AppProps) {
    const router = useRouter()
