@@ -10,7 +10,8 @@ import Script from 'next/script'
 
 
 
-const FB_PIXEL_ID = 'CODIGOPIXEL'
+// const FB_PIXEL_ID = '700239298517091'
+const FB_PIXEL_ID = '700239298517091'
 
 function MyApp({ Component, pageProps }: AppProps) {
    const router = useRouter()
@@ -35,9 +36,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-TGLDLST');
+            })(window,document,'script','dataLayer','AW-10892585408');
          */}
-         <Script async src="https://www.googletagmanager.com/gtag/js?id=GTM-TGLDLST"></Script>
+         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10892585408"></Script>
 
          <Script id="google-tag-manager" strategy="afterInteractive" dangerouslySetInnerHTML={{
             __html: `           
@@ -45,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'GTM-TGLDLST');`
+            gtag('config', 'AW-10892585408');`
          }}>
          </Script>
 
