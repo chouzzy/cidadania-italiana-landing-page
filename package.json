@@ -42,6 +42,6 @@
     "url": "https://github.com/chouzzy/PassaporteCidadaniaItaliana"
   },
   "engines": {
-    "node": "18"
+    "node": "21.6.1"
   }
 }
