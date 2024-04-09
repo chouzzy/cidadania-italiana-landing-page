@@ -1,5 +1,5 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
-import { RoadHorizon, Heart, Horse } from "@phosphor-icons/react";
+import { PiRoadHorizon } from "react-icons/pi";
 import { AirplaneTakeoff } from "phosphor-react";
 import { Card_1_Data } from "./data";
 
@@ -37,7 +37,7 @@ export function Card_1() {
                     p={4}
                 >
                     <Flex>
-                        <RoadHorizon size={32} />
+                        <PiRoadHorizon size={32} />
                     </Flex>
                     <Flex>
                         <Text

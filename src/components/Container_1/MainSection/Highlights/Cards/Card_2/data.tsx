@@ -1,5 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
-import { ClockCountdown, CubeTransparent } from "@phosphor-icons/react";
+import { PiClockCountdown, PiCubeTransparentThin  } from "react-icons/pi";
 import { Percent } from "phosphor-react";
 
 
@@ -18,12 +18,12 @@ export const Card_2_Data = {
         </Flex>,
     vantages: [
         {
-            icon:<ClockCountdown size={32} weight="light" />,
+            icon:<PiClockCountdown size={32} />,
             title: 'Cidadania reconhecida',
             subtitle: 'em poucos meses'
         },
         {
-            icon:<CubeTransparent size={32} weight="light" />,
+            icon:<PiCubeTransparentThin  size={32} />,
             title: 'Processo de A a Z, transparente',
             subtitle: 'sem surpresas ou letras miúdas'
         },

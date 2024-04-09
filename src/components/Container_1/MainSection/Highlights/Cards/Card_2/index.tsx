@@ -1,6 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { Card_2_Data } from "./data";
-import { ClockCountdown } from "@phosphor-icons/react";
 
 
 export function Card_2() {

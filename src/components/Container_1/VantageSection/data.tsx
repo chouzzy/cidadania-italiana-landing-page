@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react"
-import { Gavel } from "@phosphor-icons/react"
+import { GiGavel } from "react-icons/gi";
 import { Baby, FirstAid, GlobeHemisphereWest, HouseLine, Student } from "phosphor-react"
 
 const iconSize = 60
@@ -43,7 +43,7 @@ const vantageSectionData = {
                 bgColor:'dark.800'
             },
             {
-                icon: <Gavel size={iconSize} />,
+                icon: <GiGavel size={iconSize} />,
                 description: 'Ser um cidadão europeu com todos os seus direitos',
                 radius:'0px 0px 0px 120px',
                 bgColor:'teal.500'
