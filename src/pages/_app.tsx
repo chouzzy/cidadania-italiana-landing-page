@@ -36,9 +36,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','AW-10892585408');
+            })(window,document,'script','dataLayer','GTM-5H6LW6R2');
          */}
-         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-10892585408"></Script>
+         <Script async src="https://www.googletagmanager.com/gtag/js?id=GTM-5H6LW6R2"></Script>
 
          <Script id="google-tag-manager" strategy="afterInteractive" dangerouslySetInnerHTML={{
             __html: `           
@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'AW-10892585408');`
+            gtag('config', 'GTM-5H6LW6R2');`
          }}>
          </Script>
 
