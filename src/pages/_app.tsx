@@ -22,8 +22,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             ReactPixel.init(`${FB_PIXEL_ID}`)
             ReactPixel.pageView()
 
-            router.events.on('routeChangeComplete', () => {
-               ReactPixel.pageView()
+            router.events.on('routeChangeComplete', (url) => {
+               if (url === '/obrigado-whatsapp') {
+                  ReactPixel.pageView()
+                  ReactPixel.fbq('track', 'Lead');
+               } else {
+                  ReactPixel.pageView()
+               }
             })
          })
    }, [router.events])
@@ -36,9 +41,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','G-V5XTNB47ME');
+            })(window,document,'script','dataLayer','GTM-TGLDLST');
          */}
-         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-V5XTNB47ME"></Script>
+         <Script async src="https://www.googletagmanager.com/gtag/js?id=GTM-TGLDLST"></Script>
 
          <Script id="google-tag-manager" strategy="afterInteractive" dangerouslySetInnerHTML={{
             __html:
@@ -47,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-         })(window,document,'script','dataLayer','G-V5XTNB47ME');
+         })(window,document,'script','dataLayer','GTM-TGLDLST');
          `}}>
          </Script>
 
