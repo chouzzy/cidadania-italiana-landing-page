@@ -1,4 +1,4 @@
-import { Button, Flex, FormControl, FormLabel, Image, Input, Radio, RadioGroup, Select, Stack, Text } from "@chakra-ui/react";
+import { Button, Flex, FormControl, FormLabel, Image, Input, Link, Radio, RadioGroup, Select, Stack, Text } from "@chakra-ui/react";
 import { form } from "./data";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -10,7 +10,7 @@ export function Form() {
 
     const [bgColor, setBgColor] = useState('teal.500')
     const [disable, setDisable] = useState(false)
-    const [sentText, setSentText] = useState('Enviar informações')    // initialize state for checked items
+    const [sentText, setSentText] = useState('Clique aqui!')    // initialize state for checked items
 
 
     const {
@@ -31,17 +31,17 @@ export function Form() {
         console.log(emailData)
 
         await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(emailData))
-        .then((res) => {
-            console.log('res')
-            console.log(res)
-            console.log('res.status')
-            console.log(res.status)
-            console.log('res.data')
-            console.log(res.data)
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+            .then((res) => {
+                console.log('res')
+                console.log(res)
+                console.log('res.status')
+                console.log(res.status)
+                console.log('res.data')
+                console.log(res.data)
+            })
+            .catch((err) => {
+                console.log(err);
+            });
 
         return new Promise(() => {
             setTimeout(() => {
@@ -71,39 +71,40 @@ export function Form() {
         >
 
             {/* FORM */}
-            <form id='#contato_2' onSubmit={handleSubmit(onSubmit)}>
+            {/* <form id='#contato_2' onSubmit={handleSubmit(onSubmit)}> */}
+            <Flex
+                flexDir={'column'}
+                gap={4}
+                maxW={'33rem'}
+                alignItems={'center'}
+                p={[4, 4, 4, 2, 8]}
+                w='100%'
+            >
+
                 <Flex
                     flexDir={'column'}
-                    gap={4}
-                    maxW={'33rem'}
-                    p={[4, 4, 4, 2, 8]}
-                    w='100%'
+                    alignItems={'center'}
+                    textAlign={'center'}
+                    gap={8}
                 >
-
-                    <Flex
-                        flexDir={'column'}
-                        alignItems={'center'}
-                        textAlign={'center'}
-                        gap={8}
+                    <Text
+                        color={'teal.400'}
+                        fontWeight={'700'}
+                        fontSize={['2.25rem', '2.25rem', '2.5rem', '3rem', '3rem']}
+                        letterSpacing={'2%'}
                     >
-                        <Text
-                            color={'teal.400'}
-                            fontWeight={'700'}
-                            fontSize={['2.25rem', '2.25rem', '2.5rem', '3rem', '3rem']}
-                            letterSpacing={'2%'}
-                        >
-                            {form.title}
-                        </Text>
-                        <Text
-                            fontSize={['1.25rem', '1.25rem', '1.25rem', '1.5rem', '1.5rem']}
-                            letterSpacing={'2%'}
-                            textAlign={'center'}
-                        >
-                            {form.subtitle}
-                        </Text>
-                    </Flex>
+                        {form.title}
+                    </Text>
+                    <Text
+                        fontSize={['1.25rem', '1.25rem', '1.25rem', '1.5rem', '1.5rem']}
+                        letterSpacing={'2%'}
+                        textAlign={'center'}
+                    >
+                        {form.subtitle}
+                    </Text>
+                </Flex>
 
-
+                {/* 
                     <FormControl
                         isRequired={true}
                     >
@@ -128,11 +129,13 @@ export function Form() {
                             {form.inputs.whatsapp}
                         </FormLabel>
                         <Input placeholder="(11) 91234-5678" {...register("whatsapp")} />
-                    </FormControl>
+                    </FormControl> */}
 
+                <Link
+                    href='https://b24-lmqq2d.bitrix24.site/crm_form_ngbvy/'
+                    >
                     <Button
                         mt={4}
-                        type='submit'
                         bgColor={bgColor}
                         color={'light.400'}
                         borderRadius={'24px'}
@@ -140,8 +143,9 @@ export function Form() {
                     >
                         {sentText}
                     </Button>
-                </Flex>
-            </form>
+                </Link>
+            </Flex>
+            {/* </form> */}
 
 
             {/* IMAGE */}
