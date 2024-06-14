@@ -10,7 +10,7 @@ export function Form() {
 
     const [bgColor, setBgColor] = useState('teal.500')
     const [disable, setDisable] = useState(false)
-    const [sentText, setSentText] = useState('Clique aqui!')    // initialize state for checked items
+    const [sentText, setSentText] = useState('Enviar informações')    // initialize state for checked items
 
 
     const {
@@ -70,7 +70,7 @@ export function Form() {
 
 
             {/* FORM */}
-            {/* <form id="#contato_1" onSubmit={handleSubmit(onSubmit)}> */}
+            <form id="#contato_1" onSubmit={handleSubmit(onSubmit)}>
             <Flex
                 flexDir={'column'}
                 gap={4}
@@ -103,7 +103,7 @@ export function Form() {
                 </Flex>
 
 
-                {/* <FormControl
+                <FormControl
                         isRequired={true}
                     >
                         <FormLabel
@@ -244,6 +244,7 @@ export function Form() {
 
                     <Button
                         mt={4}
+                        w='100%'
                         type='submit'
                         bgColor={bgColor}
                         color={'light.400'}
@@ -251,9 +252,9 @@ export function Form() {
                         _hover={{ bgColor: 'teal.300', transition: "600ms" }}
                     >
                         {sentText}
-                    </Button> */}
+                    </Button>
 
-                <Link
+                {/* <Link
                     href='https://b24-lmqq2d.bitrix24.site/crm_form_ngbvy/'
                 >
                     <Button
@@ -265,9 +266,9 @@ export function Form() {
                     >
                         {sentText}
                     </Button>
-                </Link>
+                </Link> */}
             </Flex>
-            {/* </form> */}
+            </form>
 
 
             {/* IMAGE */}

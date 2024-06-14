@@ -10,7 +10,7 @@ export function Form() {
 
     const [bgColor, setBgColor] = useState('teal.500')
     const [disable, setDisable] = useState(false)
-    const [sentText, setSentText] = useState('Clique aqui!')    // initialize state for checked items
+    const [sentText, setSentText] = useState('Enviar informações')    // initialize state for checked items
 
 
     const {
@@ -71,40 +71,40 @@ export function Form() {
         >
 
             {/* FORM */}
-            {/* <form id='#contato_2' onSubmit={handleSubmit(onSubmit)}> */}
-            <Flex
-                flexDir={'column'}
-                gap={4}
-                maxW={'33rem'}
-                alignItems={'center'}
-                p={[4, 4, 4, 2, 8]}
-                w='100%'
-            >
-
+            <form id='#contato_2' onSubmit={handleSubmit(onSubmit)}>
                 <Flex
                     flexDir={'column'}
+                    gap={4}
+                    maxW={'33rem'}
                     alignItems={'center'}
-                    textAlign={'center'}
-                    gap={8}
+                    p={[4, 4, 4, 2, 8]}
+                    w='100%'
                 >
-                    <Text
-                        color={'teal.400'}
-                        fontWeight={'700'}
-                        fontSize={['2.25rem', '2.25rem', '2.5rem', '3rem', '3rem']}
-                        letterSpacing={'2%'}
-                    >
-                        {form.title}
-                    </Text>
-                    <Text
-                        fontSize={['1.25rem', '1.25rem', '1.25rem', '1.5rem', '1.5rem']}
-                        letterSpacing={'2%'}
-                        textAlign={'center'}
-                    >
-                        {form.subtitle}
-                    </Text>
-                </Flex>
 
-                {/* 
+                    <Flex
+                        flexDir={'column'}
+                        alignItems={'center'}
+                        textAlign={'center'}
+                        gap={8}
+                    >
+                        <Text
+                            color={'teal.400'}
+                            fontWeight={'700'}
+                            fontSize={['2.25rem', '2.25rem', '2.5rem', '3rem', '3rem']}
+                            letterSpacing={'2%'}
+                        >
+                            {form.title}
+                        </Text>
+                        <Text
+                            fontSize={['1.25rem', '1.25rem', '1.25rem', '1.5rem', '1.5rem']}
+                            letterSpacing={'2%'}
+                            textAlign={'center'}
+                        >
+                            {form.subtitle}
+                        </Text>
+                    </Flex>
+
+
                     <FormControl
                         isRequired={true}
                     >
@@ -129,13 +129,12 @@ export function Form() {
                             {form.inputs.whatsapp}
                         </FormLabel>
                         <Input placeholder="(11) 91234-5678" {...register("whatsapp")} />
-                    </FormControl> */}
+                    </FormControl>
 
-                <Link
-                    href='https://b24-lmqq2d.bitrix24.site/crm_form_ngbvy/'
-                    >
                     <Button
                         mt={4}
+                        w='100%'
+                        type='submit'
                         bgColor={bgColor}
                         color={'light.400'}
                         borderRadius={'24px'}
@@ -143,9 +142,8 @@ export function Form() {
                     >
                         {sentText}
                     </Button>
-                </Link>
-            </Flex>
-            {/* </form> */}
+                </Flex>
+            </form>
 
 
             {/* IMAGE */}
