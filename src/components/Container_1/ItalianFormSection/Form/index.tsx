@@ -28,6 +28,19 @@ export function Form() {
 
         const emailData = { ...values }
 
+        await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(emailData))
+        .then((res) => {
+            console.log('res')
+            console.log(res)
+            console.log('res.status')
+            console.log(res.status)
+            console.log('res.data')
+            console.log(res.data)
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
         // try {
         //     const response = await axios.post('/api/bitrix24form1', values);
         //     console.log('Resposta do endpoint:', response.data);
