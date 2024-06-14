@@ -28,14 +28,14 @@ export function Form() {
 
         const emailData = { ...values }
 
-        try {
-            const response = await axios.post('/api/bitrix24form1', values);
-            console.log('Resposta do endpoint:', response.data);
-            // Lógica para lidar com a resposta do endpoint
-        } catch (error) {
-            console.error('Erro ao enviar dados para o endpoint:', error);
-            // Lógica para lidar com o erro
-        }
+        // try {
+        //     const response = await axios.post('/api/bitrix24form1', values);
+        //     console.log('Resposta do endpoint:', response.data);
+        //     // Lógica para lidar com a resposta do endpoint
+        // } catch (error) {
+        //     console.error('Erro ao enviar dados para o endpoint:', error);
+        //     // Lógica para lidar com o erro
+        // }
 
 
         return new Promise(() => {
