@@ -15,23 +15,23 @@ const FB_PIXEL_ID = '700239298517091'
 
 function MyApp({ Component, pageProps }: AppProps) {
    const router = useRouter()
-   useEffect(() => {
-      import('react-facebook-pixel')
-         .then((x) => x.default)
-         .then((ReactPixel) => {
-            ReactPixel.init(`${FB_PIXEL_ID}`)
-            ReactPixel.pageView()
+   // useEffect(() => {
+   //    import('react-facebook-pixel')
+   //       .then((x) => x.default)
+   //       .then((ReactPixel) => {
+   //          ReactPixel.init(`${FB_PIXEL_ID}`)
+   //          ReactPixel.pageView()
 
-            router.events.on('routeChangeComplete', (url) => {
-               if (url === '/obrigado-whatsapp') {
-                  ReactPixel.pageView()
-                  ReactPixel.fbq('track', 'Lead');
-               } else {
-                  ReactPixel.pageView()
-               }
-            })
-         })
-   }, [router.events])
+   //          router.events.on('routeChangeComplete', (url) => {
+   //             if (url === '/obrigado-whatsapp') {
+   //                ReactPixel.pageView()
+   //                ReactPixel.fbq('track', 'Lead');
+   //             } else {
+   //                ReactPixel.pageView()
+   //             }
+   //          })
+   //       })
+   // }, [router.events])
    return (
       <>
          {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NX33MD3C"></Script>
