@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
    }, [router.events])
    return (
       <>
-         <Script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NX33MD3C"></Script>
+         {/* <Script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NX33MD3C"></Script>
 
          <Script id="google-tag-manager" strategy="afterInteractive" dangerouslySetInnerHTML={{
             __html:
@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
          })(window,document,'script','dataLayer','GTM-NX33MD3C');
          `}}>
-         </Script>
+         </Script> */}
          {/* <Script id="B242GA-tag-scrpits" strategy="afterInteractive" dangerouslySetInnerHTML={{
             __html: `
                (function(w,d,u){
@@ -69,7 +69,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     `,
          }}>
          </Script> */}
-
+{/* 
+         BITRIX
          <Script
             id="bitrix24-form" // Adicione um ID para facilitar a identificação e gerenciamento
             strategy="afterInteractive" // Garante que o script seja executado após a renderização inicial do conteúdo
@@ -83,7 +84,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             }}
             data-b24-form="inline/109/pac0ng" // Mantém os atributos originais
             data-skip-moving="true"
-         />
+         /> */}
 
          {/* <!-- End Google Tag Manager --> */}
 

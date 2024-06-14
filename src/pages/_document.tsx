@@ -50,8 +50,7 @@ export default class MyDocument extends Document {
                src="https://www.facebook.com/tr?id=1469014893670193&ev=PageView&noscript=1" />` }}
                   />
                   {/* <!-- End Facebook Pixel Code --> */}
-                  {/* <!-- Facebook Pixel Code --> */}
-                  <script dangerouslySetInnerHTML={{
+                  {/* <script dangerouslySetInnerHTML={{
                      __html: `
                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -59,21 +58,20 @@ export default class MyDocument extends Document {
                'https://www.googletagmanager.com/gtm.js?id=GTM-NX33MD3C'+i+dl;f.parentNode.insertBefore(j,f);
                })(window,document,'script','dataLayer','GTM-NX33MD3C');
                ` }}
-                  />
-                  {/* <!-- End Facebook Pixel Code --> */}
+                  /> */}
                </React.Fragment>
             </Head>
             <body
                style={{backgroundColor:"#EDF2F7"}}
             >
-               <noscript
+               {/* <noscript
                   dangerouslySetInnerHTML={{
                      __html: `
                      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NX33MD3C"
                         height="0" width="0" style="display:none;visibility:hidden"></iframe>
                         <meta name="facebook-domain-verification" content="p9o4crdziw52naiebnk8mv7mj3s7pu" />`,
                   }}
-               />
+               /> */}
                <Main />
                <NextScript />
             </body>
