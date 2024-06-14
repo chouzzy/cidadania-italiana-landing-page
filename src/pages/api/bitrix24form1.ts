@@ -11,7 +11,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         fields: {
           TITLE: `Novo Lead do Site - MATHEUS DESENVOLVEDOR TESTE`,
           NAME: 'MATHEUS DESENVOLVEDOR TESTE',
-          PHONE: [{ VALUE: 'WHATSAPP_TESTE', VALUE_TYPE: 'WORK' }],
+          PHONE: [{ VALUE: '11971415567', VALUE_TYPE: 'WORK' }],
+          UF_CRM_1: 'parente',
+          UF_CRM_2: 'nome_do_italiano',
+          UF_CRM_3: 'Sim' === 'Sim' ? 'Sim' : 'Não',
           // Mapeie os outros campos do formulário para os campos do Bitrix24
         },
       };
