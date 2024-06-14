@@ -9,9 +9,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const bitrix24Data = {
         fields: {
-          TITLE: `Novo Lead do Site - ${name}`,
-          NAME: name,
-          PHONE: [{ VALUE: whatsapp, VALUE_TYPE: 'WORK' }],
+          TITLE: `Novo Lead do Site - MATHEUS DESENVOLVEDOR TESTE`,
+          NAME: 'MATHEUS DESENVOLVEDOR TESTE',
+          PHONE: [{ VALUE: 'WHATSAPP_TESTE', VALUE_TYPE: 'WORK' }],
           // Mapeie os outros campos do formulário para os campos do Bitrix24
         },
       };
