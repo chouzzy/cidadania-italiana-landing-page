@@ -28,18 +28,15 @@ export function Form() {
 
         const emailData = { ...values }
 
-        await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(emailData))
-            .then((res) => {
-                console.log('res')
-                console.log(res)
-                console.log('res.status')
-                console.log(res.status)
-                console.log('res.data')
-                console.log(res.data)
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        try {
+            const response = await axios.post('/api/bitrix24form1', values);
+            console.log('Resposta do endpoint:', response.data);
+            // Lógica para lidar com a resposta do endpoint
+        } catch (error) {
+            console.error('Erro ao enviar dados para o endpoint:', error);
+            // Lógica para lidar com o erro
+        }
+
 
         return new Promise(() => {
             setTimeout(() => {
@@ -71,39 +68,39 @@ export function Form() {
 
             {/* FORM */}
             <form id="#contato_1" onSubmit={handleSubmit(onSubmit)}>
-            <Flex
-                flexDir={'column'}
-                gap={4}
-                maxW={'33rem'}
-                p={[8, 8, 8, 2, 8]}
-                alignItems={'center'}
-                w='100%'
-            >
-
                 <Flex
                     flexDir={'column'}
+                    gap={4}
+                    maxW={'33rem'}
+                    p={[8, 8, 8, 2, 8]}
                     alignItems={'center'}
-                    textAlign={'center'}
-                    gap={8}
+                    w='100%'
                 >
-                    <Text
-                        color='teal.300'
-                        fontWeight={'700'}
-                        fontSize={'3rem'}
-                        letterSpacing={'2%'}
+
+                    <Flex
+                        flexDir={'column'}
+                        alignItems={'center'}
+                        textAlign={'center'}
+                        gap={8}
                     >
-                        {form.title}
-                    </Text>
-                    <Text
-                        fontSize={'1.5rem'}
-                        letterSpacing={'2%'}
-                    >
-                        {form.subtitle}
-                    </Text>
-                </Flex>
+                        <Text
+                            color='teal.300'
+                            fontWeight={'700'}
+                            fontSize={'3rem'}
+                            letterSpacing={'2%'}
+                        >
+                            {form.title}
+                        </Text>
+                        <Text
+                            fontSize={'1.5rem'}
+                            letterSpacing={'2%'}
+                        >
+                            {form.subtitle}
+                        </Text>
+                    </Flex>
 
 
-                <FormControl
+                    <FormControl
                         isRequired={true}
                     >
                         <FormLabel
@@ -254,7 +251,7 @@ export function Form() {
                         {sentText}
                     </Button>
 
-                {/* <Link
+                    {/* <Link
                     href='https://b24-lmqq2d.bitrix24.site/crm_form_ngbvy/'
                 >
                     <Button
@@ -267,7 +264,7 @@ export function Form() {
                         {sentText}
                     </Button>
                 </Link> */}
-            </Flex>
+                </Flex>
             </form>
 
 
@@ -287,3 +284,23 @@ export function Form() {
         </Flex >
     )
 }
+
+
+
+
+
+
+
+
+// await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(emailData))
+//     .then((res) => {
+//         console.log('res')
+//         console.log(res)
+//         console.log('res.status')
+//         console.log(res.status)
+//         console.log('res.data')
+//         console.log(res.data)
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });
