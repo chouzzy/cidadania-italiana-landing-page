@@ -1,7 +1,7 @@
 import { Button, Flex, FormControl, FormLabel, Image, Input, Link, Radio, RadioGroup, Select, Stack, Text } from "@chakra-ui/react";
 import { form } from "./data";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
@@ -11,6 +11,7 @@ export function Form() {
     const [bgColor, setBgColor] = useState('teal.500')
     const [disable, setDisable] = useState(false)
     const [sentText, setSentText] = useState('Enviar informações')    // initialize state for checked items
+    const [triggerWebhook, seTtriggerWebhook] = useState(false)
 
 
     const {
@@ -29,17 +30,17 @@ export function Form() {
         const emailData = { ...values }
 
         await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(emailData))
-        .then((res) => {
-            console.log('res')
-            console.log(res)
-            console.log('res.status')
-            console.log(res.status)
-            console.log('res.data')
-            console.log(res.data)
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+            .then((res) => {
+                console.log('res')
+                console.log(res)
+                console.log('res.status')
+                console.log(res.status)
+                console.log('res.data')
+                console.log(res.data)
+            })
+            .catch((err) => {
+                console.log(err);
+            });
 
         // try {
         //     const response = await axios.post('/api/bitrix24form1', values);
@@ -66,6 +67,31 @@ export function Form() {
             }
         })
     }
+
+    useEffect(() => {
+
+        const submitForm = async () => {
+            try {
+                const values = {
+                    name: 'TestenomeLead', // Substitua pelos valores reais do formulário
+                    whatsapp: '123',
+                    parent: 'Pai',
+                    nome_do_italiano: 'TesteItaliano',
+                    documento: 'Sim',
+                };
+
+                const response = await axios.post('/api/bitrix24form1', values);
+                console.log('Resposta do endpoint:', response.data);
+                // Lógica para lidar com a resposta (ex: exibir mensagem de sucesso)
+            } catch (error) {
+                console.error('Erro ao enviar dados:', error);
+                // Lógica para lidar com o erro (ex: exibir mensagem de erro)
+            }
+        };
+
+        // Chamar a função para enviar o formulário
+        submitForm();
+    }, [triggerWebhook])
 
     return (
         <Flex
