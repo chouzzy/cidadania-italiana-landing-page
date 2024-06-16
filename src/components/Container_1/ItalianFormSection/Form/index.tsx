@@ -68,30 +68,40 @@ export function Form() {
         })
     }
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     const submitForm = async () => {
-    //         try {
-    //             const values = {
-    //                 name: 'TestenomeLead', // Substitua pelos valores reais do formulário
-    //                 whatsapp: '123',
-    //                 parent: 'Pai',
-    //                 nome_do_italiano: 'TesteItaliano',
-    //                 documento: 'Sim',
-    //             };
+        const submitForm = async () => {
+            try {
+                const bitrix24Data = {
+                    fields: {
+                        TITLE: `Novo Lead do Site - MATHEUS DESENVOLVEDOR TESTE`,
+                        NAME: 'MATHEUS DESENVOLVEDOR TESTE',
+                        PHONE: [{ VALUE: '11971415567', VALUE_TYPE: 'WORK' }],
+                        PARENTE: 'parente',
+                        NOME_DO_ITALIANO: 'nome_do_italiano',
+                        POSSUI_DOCUMENTO: 'Sim' === 'Sim' ? 'Sim' : 'Não',
+                        // Mapeie os outros campos do formulário para os campos do Bitrix24
+                    },
+                };
 
-    //             const response = await axios.post('/api/bitrix24form1', values);
-    //             console.log('Resposta do endpoint:', response.data);
-    //             // Lógica para lidar com a resposta (ex: exibir mensagem de sucesso)
-    //         } catch (error) {
-    //             console.error('Erro ao enviar dados:', error);
-    //             // Lógica para lidar com o erro (ex: exibir mensagem de erro)
-    //         }
-    //     };
+                const response = await axios.post(
+                    'https://clubedopassaporte.bitrix24.com.br/rest/25/5hdcmzn4hx3udhy3/crm.lead.add',
+                    bitrix24Data
+                );
 
-    //     // Chamar a função para enviar o formulário
-    //     submitForm();
-    // }, [triggerWebhook])
+                console.log(response.status)
+                console.log(response.data)
+
+                // Lógica para lidar com a resposta (ex: exibir mensagem de sucesso)
+            } catch (error) {
+                console.error('Erro ao enviar dados:', error);
+                // Lógica para lidar com o erro (ex: exibir mensagem de erro)
+            }
+        };
+
+        // Chamar a função para enviar o formulário
+        submitForm();
+    }, [triggerWebhook])
 
     return (
         <Flex

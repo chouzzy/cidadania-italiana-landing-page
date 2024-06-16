@@ -1,8 +1,7 @@
 // pages/api/bitrix24form1.ts
-import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async (req,res) => {
   // if (req.method === 'POST') {
   //   try {
   //     const { name, whatsapp, parent, nome_do_italiano, documento } = req.body;
