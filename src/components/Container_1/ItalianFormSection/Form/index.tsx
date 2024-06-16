@@ -68,30 +68,30 @@ export function Form() {
         })
     }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const submitForm = async () => {
-            try {
-                const values = {
-                    name: 'TestenomeLead', // Substitua pelos valores reais do formulário
-                    whatsapp: '123',
-                    parent: 'Pai',
-                    nome_do_italiano: 'TesteItaliano',
-                    documento: 'Sim',
-                };
+    //     const submitForm = async () => {
+    //         try {
+    //             const values = {
+    //                 name: 'TestenomeLead', // Substitua pelos valores reais do formulário
+    //                 whatsapp: '123',
+    //                 parent: 'Pai',
+    //                 nome_do_italiano: 'TesteItaliano',
+    //                 documento: 'Sim',
+    //             };
 
-                const response = await axios.post('/api/bitrix24form1', values);
-                console.log('Resposta do endpoint:', response.data);
-                // Lógica para lidar com a resposta (ex: exibir mensagem de sucesso)
-            } catch (error) {
-                console.error('Erro ao enviar dados:', error);
-                // Lógica para lidar com o erro (ex: exibir mensagem de erro)
-            }
-        };
+    //             const response = await axios.post('/api/bitrix24form1', values);
+    //             console.log('Resposta do endpoint:', response.data);
+    //             // Lógica para lidar com a resposta (ex: exibir mensagem de sucesso)
+    //         } catch (error) {
+    //             console.error('Erro ao enviar dados:', error);
+    //             // Lógica para lidar com o erro (ex: exibir mensagem de erro)
+    //         }
+    //     };
 
-        // Chamar a função para enviar o formulário
-        submitForm();
-    }, [triggerWebhook])
+    //     // Chamar a função para enviar o formulário
+    //     submitForm();
+    // }, [triggerWebhook])
 
     return (
         <Flex
