@@ -5,6 +5,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
+interface ItalianForm {
+    name: string
+    whatsapp: string
+    has_parent: string
+    parent: string
+    nome_do_italiano: string
+    documento: string
+}
+
 
 export function Form() {
 
@@ -12,6 +21,7 @@ export function Form() {
     const [disable, setDisable] = useState(false)
     const [sentText, setSentText] = useState('Enviar informações')    // initialize state for checked items
     const [triggerWebhook, seTtriggerWebhook] = useState(false)
+    const [emailData, setEmailData] = useState<ItalianForm>()
 
 
     const {
@@ -26,22 +36,43 @@ export function Form() {
         setDisable(true)
         setBgColor('brown.400')
         setSentText('Enviado ✔')
+        seTtriggerWebhook(!triggerWebhook)
 
-        const emailData = { ...values }
+
+        const lead:ItalianForm = {...values}
+
 
         await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(emailData))
             .then((res) => {
-                console.log('res')
-                console.log(res)
-                console.log('res.status')
-                console.log(res.status)
-                console.log('res.data')
-                console.log(res.data)
             })
             .catch((err) => {
                 console.log(err);
             });
 
+        try {
+            const bitrix24Data = {
+                fields: {
+                    TITLE: `(API) Novo Lead do Site - Nacionalidade Italiana`,
+                    NAME: `${lead.name}`,
+                    SECOND_NAME:`POSSUI PARENTE: ${lead.has_parent} // NOME DO ITALIANO: ${lead.nome_do_italiano} // GRAU DE PARENTESCO: ${lead.parent} // POSSUI DOCUMENTO ITALIANO: ${lead.documento}`,
+                    PHONE: [{ VALUE: `${lead.whatsapp}`, VALUE_TYPE: 'WORK' }]
+                    // Mapeie os outros campos do formulário para os campos do Bitrix24
+                },
+            };
+
+            const response = await axios.post(
+                `https://clubedopassaporte.bitrix24.com.br/rest/25/5hdcmzn4hx3udhy3/crm.lead.add.json?PARENTE=${'parente'}&NOME_DO_ITALIANO=${'italiano'}&POSSUI_DOCUMENTO=${'doc'}`,
+                bitrix24Data
+            );
+
+            console.log(response.status)
+            console.log(response.data)
+
+            // Lógica para lidar com a resposta (ex: exibir mensagem de sucesso)
+        } catch (error) {
+            console.error('Erro ao enviar dados:', error);
+            // Lógica para lidar com o erro (ex: exibir mensagem de erro)
+        }
 
 
         return new Promise(() => {
@@ -58,39 +89,11 @@ export function Form() {
                 })
             }
         })
+
+
     }
 
-    // useEffect(() => {
 
-    //     const submitForm = async () => {
-    //         try {
-    //             const bitrix24Data = {
-    //                 fields: {
-    //                     TITLE: `Novo Lead do Site - MATHEUS DESENVOLVEDOR TESTE`,
-    //                     NAME: 'MATHEUS DESENVOLVEDOR TESTE',
-    //                     PHONE: [{ VALUE: '11971415567', VALUE_TYPE: 'WORK' }]
-    //                     // Mapeie os outros campos do formulário para os campos do Bitrix24
-    //                 },
-    //             };
-
-    //             const response = await axios.post(
-    //                 `https://clubedopassaporte.bitrix24.com.br/rest/25/5hdcmzn4hx3udhy3/crm.lead.add.json?PARENTE=${'parente'}&NOME_DO_ITALIANO=${'italiano'}&POSSUI_DOCUMENTO=${'doc'}`,
-    //                 bitrix24Data
-    //             );
-
-    //             console.log(response.status)
-    //             console.log(response.data)
-
-    //             // Lógica para lidar com a resposta (ex: exibir mensagem de sucesso)
-    //         } catch (error) {
-    //             console.error('Erro ao enviar dados:', error);
-    //             // Lógica para lidar com o erro (ex: exibir mensagem de erro)
-    //         }
-    //     };
-
-    //     // Chamar a função para enviar o formulário
-    //     submitForm();
-    // }, [triggerWebhook])
 
     return (
         <Flex
@@ -177,7 +180,7 @@ export function Form() {
 
                         <Select
                             color={'light.400'}
-                            {...register("parent")}
+                            {...register("has_parent")}
                         >
                             <option style={{ backgroundColor: '#343434' }} value="">Selecione</option>
                             <option style={{ backgroundColor: '#343434' }} value="ja_sei">Já sei</option>
