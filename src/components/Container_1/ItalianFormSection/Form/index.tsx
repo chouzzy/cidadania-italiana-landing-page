@@ -54,7 +54,8 @@ export function Form() {
                 fields: {
                     TITLE: `(API) Novo Lead do Site - Nacionalidade Italiana`,
                     NAME: `${lead.name}`,
-                    SECOND_NAME:`POSSUI PARENTE: ${lead.has_parent} // NOME DO ITALIANO: ${lead.nome_do_italiano} // GRAU DE PARENTESCO: ${lead.parent} // POSSUI DOCUMENTO ITALIANO: ${lead.documento}`,
+                    SECOND_NAME:`SABE QUEM É O ITALIANO: ${lead.has_parent} // `,
+                    SOURCE_DESCRIPTION:`NOME DO ITALIANO: ${lead.nome_do_italiano} // GRAU DE PARENTESCO: ${lead.parent} // POSSUI DOCUMENTO ITALIANO: ${lead.documento}`,
                     PHONE: [{ VALUE: `${lead.whatsapp}`, VALUE_TYPE: 'WORK' }]
                     // Mapeie os outros campos do formulário para os campos do Bitrix24
                 },
