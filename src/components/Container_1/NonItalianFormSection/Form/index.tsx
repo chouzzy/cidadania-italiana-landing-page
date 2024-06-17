@@ -5,6 +5,10 @@ import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 
+interface NonItalianForm {
+    name: string,
+    whatsapp: string
+}
 
 export function Form() {
 
@@ -26,28 +30,47 @@ export function Form() {
         setBgColor('brown.400')
         setSentText('Enviado ✔')
 
-        const emailData = { ...values }
+        const lead:NonItalianForm = {...values}
 
-        console.log(emailData)
+        console.log('lead')
+        console.log(lead)
 
-        await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(emailData))
+        await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(lead))
             .then((res) => {
-                console.log('res')
-                console.log(res)
-                console.log('res.status')
-                console.log(res.status)
-                console.log('res.data')
-                console.log(res.data)
             })
             .catch((err) => {
-                console.log(err);
             });
+
+        try {
+            const bitrix24Data = {
+                fields: {
+                    TITLE: `(API) Novo Lead do Site - Nacionalidade Italiana`,
+                    NAME: `${lead.name}`,
+                    SOURCE_DESCRIPTION: `SABE QUEM É O ITALIANO: Não sei. `,
+                    PHONE: [{ VALUE: `${lead.whatsapp}`, VALUE_TYPE: 'WORK' }]
+                    // Mapeie os outros campos do formulário para os campos do Bitrix24
+                },
+            };
+
+            const response = await axios.post(
+                `https://clubedopassaporte.bitrix24.com.br/rest/25/5hdcmzn4hx3udhy3/crm.lead.add.json?PARENTE=${'parente'}&NOME_DO_ITALIANO=${'italiano'}&POSSUI_DOCUMENTO=${'doc'}`,
+                bitrix24Data
+            );
+
+            console.log(response.status)
+            console.log(response.data)
+
+            // Lógica para lidar com a resposta (ex: exibir mensagem de sucesso)
+        } catch (error) {
+            console.error('Erro ao enviar dados:', error);
+            // Lógica para lidar com o erro (ex: exibir mensagem de erro)
+        }
 
         return new Promise(() => {
             setTimeout(() => {
                 fetch('/api/NonItalianMail', {
                     method: 'post',
-                    body: JSON.stringify(emailData)
+                    body: JSON.stringify(lead)
                 })
             }, 2000)
 
