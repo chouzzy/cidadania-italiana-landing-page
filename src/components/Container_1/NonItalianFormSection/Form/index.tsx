@@ -53,7 +53,7 @@ export function Form() {
             };
 
             const response = await axios.post(
-                `https://clubedopassaporte.bitrix24.com.br/rest/25/5hdcmzn4hx3udhy3/crm.lead.add.json?PARENTE=${'parente'}&NOME_DO_ITALIANO=${'italiano'}&POSSUI_DOCUMENTO=${'doc'}`,
+                `https://clubedopassaporte.bitrix24.com.br/rest/5/5cx1d37jk27bnwve/crm.lead.add.json`,
                 bitrix24Data
             );
 
