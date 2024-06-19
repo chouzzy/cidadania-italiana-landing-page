@@ -4,9 +4,11 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { ddis } from "../../NonItalianFormSection/Form/data";
 
 interface ItalianForm {
     name: string
+    ddi:string
     whatsapp: string
     has_parent: string
     parent: string
@@ -39,7 +41,7 @@ export function Form() {
         seTtriggerWebhook(!triggerWebhook)
 
 
-        const lead:ItalianForm = {...values}
+        const lead: ItalianForm = { ...values }
 
 
         await axios.post("https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTY4MDYzZjA0M2Q1MjY0NTUzNjUxMzIi_pc", JSON.stringify(lead))
@@ -54,9 +56,9 @@ export function Form() {
                 fields: {
                     TITLE: `(API) Novo Lead do Site - Nacionalidade Italiana`,
                     NAME: `${lead.name}`,
-                    SECOND_NAME:`SABE QUEM É O ITALIANO: ${lead.has_parent} // `,
-                    SOURCE_DESCRIPTION:`NOME DO ITALIANO: ${lead.nome_do_italiano} // GRAU DE PARENTESCO: ${lead.parent} // POSSUI DOCUMENTO ITALIANO: ${lead.documento}`,
-                    PHONE: [{ VALUE: `${lead.whatsapp}`, VALUE_TYPE: 'WORK' }]
+                    SECOND_NAME: `SABE QUEM É O ITALIANO: ${lead.has_parent} // `,
+                    SOURCE_DESCRIPTION: `NOME DO ITALIANO: ${lead.nome_do_italiano} // GRAU DE PARENTESCO: ${lead.parent} // POSSUI DOCUMENTO ITALIANO: ${lead.documento}`,
+                    PHONE: [{ VALUE: `${lead.ddi}${lead.whatsapp}`, VALUE_TYPE: 'WORK' }]
                     // Mapeie os outros campos do formulário para os campos do Bitrix24
                 },
             };
@@ -155,17 +157,20 @@ export function Form() {
                         <Input placeholder="João da Silva Exemplo" type="name" {...register("name")} />
                     </FormControl>
 
-                    <FormControl
-                        isRequired={true}
-                    >
-                        <FormLabel
-                            fontSize={'0.875rem'}
-                            fontWeight={'700'}
-                            letterSpacing={'5%'}
-                        >
+                    <FormControl isRequired={true}>
+                        <FormLabel fontSize={'0.875rem'} fontWeight={'700'} letterSpacing={'5%'}>
                             {form.inputs.whatsapp}
                         </FormLabel>
-                        <Input placeholder="(11) 91234-5678" {...register("whatsapp")} />
+                        <Flex>
+                            <Select {...register("ddi")} fontSize={'0.875rem'} w="200px" mr={2}> {/* Select para o DDI */}
+                                {ddis.map((ddi) => (
+                                    <option style={{color:'black'}} key={ddi.value} value={ddi.value}>
+                                        {ddi.country}
+                                    </option>
+                                ))}
+                            </Select>
+                            <Input placeholder="ex: (11) 91234-5678" {...register("whatsapp")} />
+                        </Flex>
                     </FormControl>
 
                     <FormControl

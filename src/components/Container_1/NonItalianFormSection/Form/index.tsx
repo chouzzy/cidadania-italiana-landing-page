@@ -1,5 +1,5 @@
 import { Button, Flex, FormControl, FormLabel, Image, Input, Link, Radio, RadioGroup, Select, Stack, Text } from "@chakra-ui/react";
-import { form } from "./data";
+import { ddis, form } from "./data";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 
 interface NonItalianForm {
     name: string,
+    ddi:string,
     whatsapp: string
 }
 
@@ -15,7 +16,6 @@ export function Form() {
     const [bgColor, setBgColor] = useState('teal.500')
     const [disable, setDisable] = useState(false)
     const [sentText, setSentText] = useState('Enviar informações')    // initialize state for checked items
-
 
     const {
         handleSubmit,
@@ -30,7 +30,7 @@ export function Form() {
         setBgColor('brown.400')
         setSentText('Enviado ✔')
 
-        const lead:NonItalianForm = {...values}
+        const lead: NonItalianForm = { ...values }
 
         console.log('lead')
         console.log(lead)
@@ -47,7 +47,7 @@ export function Form() {
                     TITLE: `(API) Novo Lead do Site - Nacionalidade Italiana`,
                     NAME: `${lead.name}`,
                     SOURCE_DESCRIPTION: `SABE QUEM É O ITALIANO: Não sei. `,
-                    PHONE: [{ VALUE: `${lead.whatsapp}`, VALUE_TYPE: 'WORK' }]
+                    PHONE: [{ VALUE: `${lead.ddi}${lead.whatsapp}`, VALUE_TYPE: 'WORK' }]
                     // Mapeie os outros campos do formulário para os campos do Bitrix24
                 },
             };
@@ -141,17 +141,21 @@ export function Form() {
                         <Input placeholder="João da Silva Exemplo" type="name" {...register("name")} />
                     </FormControl>
 
-                    <FormControl
-                        isRequired={true}
-                    >
-                        <FormLabel
-                            fontSize={'0.875rem'}
-                            fontWeight={'700'}
-                            letterSpacing={'5%'}
-                        >
+
+                    <FormControl isRequired={true}>
+                        <FormLabel fontSize={'0.875rem'} fontWeight={'700'} letterSpacing={'5%'}>
                             {form.inputs.whatsapp}
                         </FormLabel>
-                        <Input placeholder="(11) 91234-5678" {...register("whatsapp")} />
+                        <Flex>
+                            <Select {...register("ddi")} fontSize={'0.875rem'} w="200px" mr={2}> {/* Select para o DDI */}
+                                {ddis.map((ddi) => (
+                                    <option key={ddi.value} value={ddi.value}>
+                                        {ddi.country}
+                                    </option>
+                                ))}
+                            </Select>
+                            <Input placeholder="ex: (11) 91234-5678" {...register("whatsapp")} />
+                        </Flex>
                     </FormControl>
 
                     <Button
